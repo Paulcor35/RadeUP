@@ -5,7 +5,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("bdd/users.json");
+        const response = await fetch("/RadeUp/BDD/users.json");
         const data = await response.json();
 
         const user = data.users.find(
