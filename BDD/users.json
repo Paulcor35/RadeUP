@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "login": "admin@mail.com",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "nom": "Martin",
+      "prenom": "Alice",
+      "login": "user@mail.com",
+      "password": "user123"
+    }
+  ]
+}
