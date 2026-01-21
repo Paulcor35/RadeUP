@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Lien vers le CSS externe -->
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+
+<div class="login-container">
+    <h1>Connexion</h1>
+
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="exemple@mail.com"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="••••••••"
+                required
+            >
+        </div>
+
+        <button type="submit" class="login-btn">
+            Se connecter
+        </button>
+    </form>
+
+    <div class="extra">
+        <p><a href="#">Mot de passe oublié ?</a></p>
+        <p>Pas encore de compte ? <a href="#">S'inscrire</a></p>
+    </div>
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // Identifiants autorisés
+    const validEmail = "admin@mail.com";
+    const validPassword = "1234";
+
+    if (email === validEmail && password === validPassword) {
+        window.location.href = "index.html";
+    } else {
+        alert("❌ Email ou mot de passe incorrect");
+    }
+});
+</script>
+
+</body>
+</html>
